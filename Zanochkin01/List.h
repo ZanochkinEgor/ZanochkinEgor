@@ -13,7 +13,7 @@ public:
 	void Add_student();
 	void Delete_student(int);
 	void Print_all() const;
-	void Print_one_el(int) const;
+	void Print_one_student(int) const;
 	Task Create_student();
 	Task Create_student2();
 	void Create_list();

@@ -44,7 +44,7 @@ void Menu() {
 			cout << "Enter a number of student:";
 			cin >> c;
 			if (c <= list.getList_size()) {
-				list.Print_one_el(c);
+				list.Print_one_student(c);
 			}
 			else {
 				cout<<"You have chosen the wrong number of student";

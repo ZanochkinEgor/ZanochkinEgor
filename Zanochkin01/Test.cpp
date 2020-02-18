@@ -1,25 +1,25 @@
 #include "List.h"
 #include "Task.h"
 
-void Test_Add_student(List, int);
-void Test_Delete_student(List, int);
+int Test_Add_student(List&, int);
+int Test_Delete_student(List&, int);
 
 int main()
 {
-	List stud;
+	List test;
 	int count = 0;
-	stud.setList_size(2);
-	stud.Create_list();
+	test.setList_size(2);
+	test.Create_list();
 
-	Test_Add_student(stud, count);
-	//Test_Delete_student(stud, count);
+	count = Test_Add_student(test, count);
+	count = Test_Delete_student(test, count);
 
 	if (count == 2)
-		cout << "All tests are succesful";
+		cout << "All tests are succesful" << endl;
 	else
-		cout << "Not all tests are succesful";
+		cout << "Not all tests are succesful" << endl;
 
-	stud.Free_memory();
+	test.Free_memory();
 	if (_CrtDumpMemoryLeaks())
 		cout << endl << "WARNING! Memory leak" << endl;
 	else
@@ -27,26 +27,28 @@ int main()
 	return 0;
 }
 
-void Test_Add_student(List stud, int count)
+int Test_Add_student(List& test, int count)
 {
-	stud.Add_student();
-	if (stud.getList_size() == 3)
+	test.Add_student();
+	if (test.getList_size() == 3)
 	{
-		cout << "Test 1 is succesful";
+		cout << "Test 1 is succesful" << endl;
 		count++;
 	}
 	else
-		cout << "Test 1 is unsuccesful";
+		cout << "Test 1 is unsuccesful" << endl;
+	return count;
 }
 
-void Test_Delete_student(List stud, int count)
+int Test_Delete_student(List& test, int count)
 {
-	stud.Delete_student(stud.getList_size());
-	if (stud.getList_size() == 1)
+	test.Delete_student(test.getList_size());
+	if (test.getList_size() == 2)
 	{
-		cout << "Test 2 is succesful";
+		cout << "Test 2 is succesful" << endl;
 		count++;
 	}
 	else
-		cout << "Test 2 is unsuccesful";
+		cout << "Test 2 is unsuccesful" << endl;
+	return count;
 }
