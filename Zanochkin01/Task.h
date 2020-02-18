@@ -9,11 +9,12 @@
 #include <iostream>
 using namespace std;
 
-class Task {
+class Task 
+{
 private:
 	int mark;
 	int count_of_done_exercises;
-	int variant;
+	int student_index;
 
 public:
 	int getMark() const;
@@ -22,8 +23,8 @@ public:
 	int getCount_of_done_exercises() const;
 	void setCount_of_done_exercises(int);
 
-	int getVariant() const;
-	void setVariant(int);
+	int getStudent_index() const;
+	void setStudent_index(int);
 };
 
 void Menu();

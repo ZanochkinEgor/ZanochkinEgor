@@ -15,9 +15,9 @@ int main()
 	count = Test_Delete_student(test, count);
 
 	if (count == 2)
-		cout << "All tests are succesful" << endl;
+		cout << "All tests are successful" << endl;
 	else
-		cout << "Not all tests are succesful" << endl;
+		cout << "Not all tests are successful" << endl;
 
 	test.Free_memory();
 	if (_CrtDumpMemoryLeaks())
@@ -32,11 +32,11 @@ int Test_Add_student(List& test, int count)
 	test.Add_student();
 	if (test.getList_size() == 3)
 	{
-		cout << "Test 1 is succesful" << endl;
+		cout << "Test 1 is successful" << endl;
 		count++;
 	}
 	else
-		cout << "Test 1 is unsuccesful" << endl;
+		cout << "Test 1 is unsuccessful" << endl;
 	return count;
 }
 
@@ -45,10 +45,10 @@ int Test_Delete_student(List& test, int count)
 	test.Delete_student(test.getList_size());
 	if (test.getList_size() == 2)
 	{
-		cout << "Test 2 is succesful" << endl;
+		cout << "Test 2 is successful" << endl;
 		count++;
 	}
 	else
-		cout << "Test 2 is unsuccesful" << endl;
+		cout << "Test 2 is unsuccessful" << endl;
 	return count;
 }
