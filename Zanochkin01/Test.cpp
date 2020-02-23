@@ -29,14 +29,14 @@ int main()
 
 int Test_Add_student(List& test, int count)
 {
-	test.Add_student();
+	test.Add_student(Create_student2());
 	if (test.getList_size() == 3)
 	{
-		cout << "Test 1 is successful" << endl;
+		cout << "Test: Add_student - successful" << endl;
 		count++;
 	}
 	else
-		cout << "Test 1 is unsuccessful" << endl;
+		cout << "Test: Add_student - unsuccessful" << endl;
 	return count;
 }
 
@@ -45,10 +45,10 @@ int Test_Delete_student(List& test, int count)
 	test.Delete_student(test.getList_size());
 	if (test.getList_size() == 2)
 	{
-		cout << "Test 2 is successful" << endl;
+		cout << "Test: Delete_student - successful" << endl;
 		count++;
 	}
 	else
-		cout << "Test 2 is unsuccessful" << endl;
+		cout << "Test: Delete_student - unsuccessful" << endl;
 	return count;
 }
