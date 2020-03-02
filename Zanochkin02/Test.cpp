@@ -31,7 +31,7 @@ int Test_Add_student(List& test, int count)
 	test.Add_student(Create_student2());
 	if (test.getList_size() == 3)
 	{
-		cout << "Test: Add_student - successful" << endl;
+		cout << "Test: Add_student - successful" << endl; 
 		count++;
 	}
 	else

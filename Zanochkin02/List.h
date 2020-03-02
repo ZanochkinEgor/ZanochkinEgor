@@ -17,6 +17,7 @@ public:
 	void Print_one_student(int) const;
 	void Create_list();
 	void Get_student_ID(int)const;
+	void Get_student_RGZ(int)const;
 	~List();
 };
 

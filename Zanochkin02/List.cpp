@@ -12,6 +12,7 @@ void List::Add_student(const Task task)
 		newstud[i] = stud[i];
 	newstud[list_size - 1] = task;
 	newstud[list_size - 1].setStudent_index(stud[list_size - 2].getStudent_index() + 1);
+	newstud[list_size - 1].setRgz(stud[list_size - 2].getRgz() + 1);
 	delete[] stud;
 	stud = new Task[list_size];
 	for (int i = 0; list_size > i; i++)
@@ -25,6 +26,7 @@ void List::Create_list()
 	{
 		stud[i] = Create_student();
 		stud[i].setStudent_index(i + 1);
+		stud[i].setRgz(i + 1);
 	}
 }
 void List::Delete_student(int c)
@@ -78,7 +80,7 @@ void List::Print_all() const
 }
 List::~List()
 {
-	cout << "Destructor" << endl;
+	cout << "Destructor List" << endl;
 	delete[] stud;
 }
 
@@ -91,4 +93,15 @@ void List::Get_student_ID(int id) const
 			return;
 		}
 	cout << "Wrong ID" << endl;
+}
+
+void List::Get_student_RGZ(int a) const
+{
+	for (int i = 0; i < list_size; i++)
+		if (stud[i].getStudent_index() == a)
+		{
+			Print_one_student(i);
+			return;
+		}
+	cout << "Wrong count of RGZ" << endl;
 }

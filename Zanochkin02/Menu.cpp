@@ -4,7 +4,7 @@
 void Menu()
 {
 	List list;
-	int c = 0;
+	int c = 0, a = 0;
 	int count_of_students = 2;
 	int menu_number = 1;
 	int delete_number;
@@ -19,6 +19,7 @@ void Menu()
 		cout << "3.Show all student" << endl;
 		cout << "4.Show student via his index" << endl;
 		cout << "5.End program" << endl;
+		cout << "6.Individual task" << endl;
 		cin >> menu_number;
 		switch (menu_number)
 		{
@@ -49,6 +50,11 @@ void Menu()
 			break;
 		case 5:
 			menu_number = 0;
+			break;
+		case 6:
+			cout << "Enter a count of RGZ";
+			cin >> a;
+			list.Get_student_RGZ(a);
 			break;
 		default:
 			cout << "You have chosen the wrong number of the menu";
