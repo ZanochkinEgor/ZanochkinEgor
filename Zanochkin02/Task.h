@@ -13,23 +13,23 @@ class Task
 {
 private:
 	int mark;
-	int count_of_done_exercises;
-	int student_index;
-	const char* male_or_female;
+	int countOfDoneExercises;
+	int studentIndex;
+	const char* maleOrFemale;
 	int rgz;
 
 public:
 	int getMark() const;
 	void setMark(int);
 
-	int getCount_of_done_exercises() const;
-	void setCount_of_done_exercises(int);
+	int getCountOfDoneExercises() const;
+	void setCountOfDoneExercises(int);
 
-	int getStudent_index() const;
-	void setStudent_index(int);
+	int getStudentIndex() const;
+	void setStudentIndex(int);
 
-	const char* getMale_or_female() const;
-	void setMale_or_female(const char*);
+	const char* getMaleOrFemale() const;
+	void setMaleOrFemale(const char*);
 
 	int getRgz() const;
 	void setRgz(int);
