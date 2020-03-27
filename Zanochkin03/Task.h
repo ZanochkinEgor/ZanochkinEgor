@@ -5,37 +5,45 @@
 #define DEBUG_NEW new(_NORMAL_BLOCK, __FILE__, __LINE__)
 #define new DEBUG_NEW
 
-#include <cstdio> 	  
+#include <string>
 #include <iostream>
-using namespace std;
+#include <iomanip>
+#include <sstream>
+#include <fstream>
+
+using std::string;
+using std::cin;
+using std::cout;
+using std::endl;
+using std::setw;
+using std::stringstream;
 
 class Task
 {
 private:
-	int mark;
-	int count_of_done_exercises;
-	int student_index;
-	const char* male_or_female;
+	int studentIndex;
+	string name;
+	int mark;	
+	int countOfDoneExercises;
 	int rgz;
-
 public:
 	int getMark() const;
 	void setMark(int);
 
-	int getCount_of_done_exercises() const;
-	void setCount_of_done_exercises(int);
+	int getCountOfDoneExercises() const;
+	void setCountOfDoneExercises(int);
 
-	int getStudent_index() const;
-	void setStudent_index(int);
-
-	const char* getMale_or_female() const;
-	void setMale_or_female(const char*);
+	int getStudentIndex() const;
+	void setStudentIndex(int);
 
 	int getRgz() const;
 	void setRgz(int);
 
+	string getName() const;
+	void setName(const string);
+
 	Task();
-	Task(char*, int, int, int, int);
+	Task(int, string, int, int, int);
 	Task(const Task& stud);
 	~Task();
 };

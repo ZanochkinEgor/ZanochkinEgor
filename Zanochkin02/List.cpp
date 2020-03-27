@@ -24,7 +24,7 @@ void List::createList()
 	stud = new Task[listSize];
 	for (int i = 0; listSize > i; i++)
 	{
-		stud[i] = Create_student();
+		stud[i] = CreateStudent();
 		stud[i].setStudentIndex(i + 1);
 		stud[i].setRgz(i + 1);
 	}

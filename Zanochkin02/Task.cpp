@@ -16,7 +16,7 @@ void Task::setMaleOrFemale(const char* male_or_female1) { maleOrFemale = male_or
 int Task::getRgz() const { return rgz; }
 void Task::setRgz(int rgz1) { rgz = rgz1; }
 
-Task Create_student()
+Task CreateStudent()
 {
 	Task stud;
 	stud.setMark(5);
@@ -24,7 +24,7 @@ Task Create_student()
 	stud.setMaleOrFemale("Male");
 	return stud;
 }
-Task Create_student2()
+Task CreateStudent2()
 {
 	Task stud;
 	stud.setMark(2);
@@ -33,7 +33,7 @@ Task Create_student2()
 	return stud;
 }
 
-Task::Task(char* male_or_female, int mark, int count_of_done_exercises, int student_index, int rgz) :mark(mark), countOfDoneExercises(count_of_done_exercises), studentIndex(student_index), maleOrFemale(male_or_female), rgz(rgz)
+Task::Task(char* male_or_female, int mark, int countOfDoneExercises, int student_index, int rgz) :mark(mark), countOfDoneExercises(countOfDoneExercises), studentIndex(student_index), maleOrFemale(male_or_female), rgz(rgz)
 {
 	cout << "Constructor with parameter" << endl;
 }

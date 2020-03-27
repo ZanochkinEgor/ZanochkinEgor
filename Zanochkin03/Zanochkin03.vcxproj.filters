@@ -39,4 +39,12 @@
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="Text.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+    <Text Include="Result.txt">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+  </ItemGroup>
 </Project>

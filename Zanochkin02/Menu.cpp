@@ -24,7 +24,7 @@ void Menu()
 		switch (menu_number)
 		{
 		case 1:
-			list.addStudent(Create_student2());
+			list.addStudent(CreateStudent2());
 			break;
 		case 2:
 			cout << "Enter a index of student who you want to delete:" << endl;

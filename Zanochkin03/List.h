@@ -4,22 +4,28 @@
 class List
 {
 private:
-	int list_size;
+	int listSize;
 
 public:
 	Task* stud;
 
-	int getList_size() const;
-	void setList_size(int);
-	void Add_student(Task);
-	void Delete_student(int);
-	void Print_all() const;
-	void Print_one_student(int) const;
-	void Create_list();
-	void Get_student_ID(int)const;
-	void Get_student_RGZ(int)const;
+	int getListSize() const;
+	void setListSize(int);
+	void addStudent(const Task);
+	void deleteStudent(int);
+	void printAll() const;
+	void printOneStudent(stringstream&) const;
+	void createList();
+	int getStudentID(int)const;
+	int getStudentRGZ(int)const;
+	void ReadFile(string, int);
+	int FileString(string);
+	void WriteFile(string) const;
+	stringstream getObj(int i) const;
+	stringstream DataToString();
+	Task StringToObject(stringstream);
 	~List();
 };
 
-Task Create_student();
-Task Create_student2();
+Task CreateStudent();
+Task CreateStudent2();

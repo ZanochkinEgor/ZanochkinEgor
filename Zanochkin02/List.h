@@ -21,5 +21,5 @@ public:
 	~List();
 };
 
-Task Create_student();
-Task Create_student2();
+Task CreateStudent();
+Task CreateStudent2();

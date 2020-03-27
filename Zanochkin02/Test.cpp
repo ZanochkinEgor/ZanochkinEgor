@@ -19,8 +19,8 @@ int main()
 			cout << endl << "All tests are successful" << endl;
 		else
 			cout << endl << "Not all tests are successful" << endl;
-	}
 
+	}
 	if (_CrtDumpMemoryLeaks())
 		cout << endl << "WARNING! Memory leak" << endl;
 	else
@@ -30,7 +30,7 @@ int main()
 
 int TestAddStudent(List& test, int count)
 {
-	test.addStudent(Create_student2());
+	test.addStudent(CreateStudent2());
 	if (test.getListSize() == 3)
 	{
 		cout << endl << "Test: Add_student - successful" << endl;
