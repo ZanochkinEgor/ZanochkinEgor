@@ -73,9 +73,9 @@ void List::printOneStudent(stringstream& ss) const
 }
 void List::printAll() const
 {
-	cout << std::left <<setw(6)<< "Index" << setw(7) << "Name" << setw(10) << "Mark" << setw(13) << "Exercises" << setw(8) << "RGZ"<<endl;
+	cout << std::left << setw(6) << "Index" << setw(7) << "Name" << setw(10) << "Mark" << setw(13) << "Exercises" << setw(8) << "RGZ" << endl;
 	for (int i = 0; List::getListSize() > i; i++)
-		cout << std::left <<setw(6)<< stud[i].getStudentIndex() << setw(7) << stud[i].getName() << setw(10) << stud[i].getMark() << setw(13) << stud[i].getCountOfDoneExercises() << setw(8) << stud[i].getRgz()<<endl;
+		cout << std::left << setw(6) << stud[i].getStudentIndex() << setw(7) << stud[i].getName() << setw(10) << stud[i].getMark() << setw(13) << stud[i].getCountOfDoneExercises() << setw(8) << stud[i].getRgz() << endl;
 }
 List::~List()
 {
@@ -101,22 +101,22 @@ int List::getStudentRGZ(int a) const
 	return -1;
 }
 
-void List::ReadFile(string filename, int c) 
+void List::ReadFile(string filename, int c)
 {
 	std::ifstream fin(filename);
 	if (!fin.is_open())
 		return;
 	delete[] stud;
 	stud = new Task[c];
-	for (int i = 0; c > i; i++) 
+	for (int i = 0; c > i; i++)
 	{
 		int studentIndex;
 		string name;
 		int mark;
 		int countOfDoneExercises;
-		
+
 		int rgz;
-		
+
 		fin >> studentIndex;
 		fin >> name;
 		fin >> mark;
@@ -131,7 +131,7 @@ void List::ReadFile(string filename, int c)
 	return;
 }
 
-int List::FileString(string filename) 
+int List::FileString(string filename)
 {
 	int c = 0;
 	string line;
@@ -147,7 +147,7 @@ int List::FileString(string filename)
 	return c;
 }
 
-void List::WriteFile(string filename) const 
+void List::WriteFile(string filename) const
 {
 	std::ofstream fout(filename);
 	if (!fout.is_open())
@@ -177,14 +177,14 @@ stringstream List::getObj(int i) const {
 	return ss;
 }
 
-stringstream List::DataToString() 
+stringstream List::DataToString()
 {
 	stringstream ss;
 	int index, mark, rgz, exercises;
 	string name;
 	cout << "Enter student data (ID, Name, Mark, Exercises, RGZ):" << endl;
 	cin >> index >> name >> mark >> exercises >> rgz;
-	ss << index<<" " << name<<" " << mark<<" " << exercises<<" " << rgz;
+	ss << index << " " << name << " " << mark << " " << exercises << " " << rgz;
 	return ss;
 }
 

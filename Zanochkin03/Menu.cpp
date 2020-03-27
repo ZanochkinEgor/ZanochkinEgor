@@ -40,7 +40,7 @@ void Menu()
 		case 3:
 			cout << "Enter a index of student who you want to delete:" << endl;
 			cin >> delete_number;
-			if (delete_number < 1) 
+			if (delete_number < 1)
 			{
 				cout << "Wrong student index" << endl;
 				break;

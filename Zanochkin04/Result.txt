@@ -1,3 +1,5 @@
-1  Vasya  5      10    4     
-2  Egor   4      15    5     
-3  Ivan   3      20    6     
+1  Ivanov Vasya   5      10    4     
+2  Zanochkin Egor 4      15    5     
+3  Plohoi Ivan    3      20    6     
+4  Ivanov Petya   2      2     7     
+5  Ivanov Petya   2      2     8     

@@ -23,7 +23,7 @@ class Task
 private:
 	int studentIndex;
 	string name;
-	int mark;	
+	int mark;
 	int countOfDoneExercises;
 	int rgz;
 public:

@@ -33,7 +33,7 @@ Task CreateStudent2()
 	return stud;
 }
 
-Task::Task(int student_index, string name, int mark, int countOfDoneExercises, int rgz) : studentIndex(student_index), name(name), mark(mark), countOfDoneExercises(countOfDoneExercises),  rgz(rgz)
+Task::Task(int student_index, string name, int mark, int countOfDoneExercises, int rgz) : studentIndex(student_index), name(name), mark(mark), countOfDoneExercises(countOfDoneExercises), rgz(rgz)
 {
 	cout << "Constructor with parameter" << endl;
 }
