@@ -63,6 +63,9 @@ public:
 	int getAge() const;
 	void setAge(const int);
 
+	int generateID();
+	int generateRGZ();
+
 	Task();
 	Task(int, string, int, int, int, int, sint, sint, sint);
 	Task(const Task& stud);

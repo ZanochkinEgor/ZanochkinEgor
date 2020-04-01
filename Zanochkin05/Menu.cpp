@@ -8,6 +8,7 @@ void Menu()
 	int c = 0, a = 0, b = 0, value = 0;
 	////////////////////
 	auto count_of_students = 1;
+	//Плюсы auto: В зависимости от введеных данных переменная может менять свой тип. Например, былa int, а после некоторых изменений стала double.
 	////////////////////
 	int menu_number = 1;
 	int delete_number;
@@ -32,7 +33,7 @@ void Menu()
 		cout << "7.Read array from file" << endl;
 		cout << "8.Write to file" << endl;
 		cout << "9.Surname+Name in object" << endl;
-		cout << "10.Sort" << endl;
+		cout << "10.Sort (mark)" << endl;
 		cout << "11.End program" << endl;
 		cin >> menu_number;
 		switch (menu_number)
@@ -52,7 +53,7 @@ void Menu()
 				cout << "Wrong student index" << endl;
 				break;
 			}
-			for (int i = 0; list.getListSize() > i; i++)
+			for (size_t i = 0; list.getListSize() > i; i++)
 				if (delete_number == list.stud[i].getStudentIndex())
 				{
 					list.deleteStudent(delete_number);
@@ -98,7 +99,6 @@ void Menu()
 			cout << "2) Decrising" << endl;
 			cin >> value;
 			cout << endl;
-
 			if (value == 1) list.sort(list.sortAsc);
 			else if (value == 2) list.sort(list.sortDesc);
 			else cout << "Wrong number." << endl;

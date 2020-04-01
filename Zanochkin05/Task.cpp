@@ -68,4 +68,5 @@ Task::Task(const Task& stud) : studentIndex(stud.studentIndex), name(stud.name),
 Task::~Task()
 {
 	cout << "Destructor Task" << endl;
+
 }

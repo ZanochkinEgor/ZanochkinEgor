@@ -5,10 +5,9 @@ class List
 {
 private:
 	int listSize;
-
 public:
 	Task* stud;
-
+	
 	int getListSize() const;
 	void setListSize(int);
 	void addStudent(const Task);

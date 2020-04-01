@@ -5,6 +5,18 @@
 int List::getListSize() const { return listSize; }
 void List::setListSize(int size) { listSize = size; }
 
+int Task::generateID()
+{
+	static int id = 1;
+	return id++;
+}
+
+int Task::generateRGZ()
+{
+	static int RGZ = 5;
+	return RGZ++;
+}
+
 void List::addStudent(const Task task)
 {
 	if (task.getMark() == 0)
@@ -14,37 +26,37 @@ void List::addStudent(const Task task)
 	}
 	setListSize(getListSize() + 1);
 	Task* newstud = new Task[listSize];
-	for (int i = 0; i < listSize - 1; i++)
+	for (size_t i = 0; i < listSize - 1; i++)
 		newstud[i] = stud[i];
 	newstud[listSize - 1] = task;
 	if (newstud[listSize - 1].getStudentIndex() == 0)
 	{
-		//newstud[listSize - 1].setStudentIndex(stud[listSize - 2].getStudentIndex() + 1);
-		newstud[listSize - 1].setStudentIndex(getListSize());
-		//newstud[listSize - 1].setRgz(stud[listSize - 2].getRgz() + 1);
-		newstud[listSize - 1].setRgz(getListSize()+5);
+		newstud[listSize - 1].setStudentIndex(stud->generateID());
+		newstud[listSize - 1].setRgz(stud->generateRGZ());
 	}
 	delete[] stud;
 	stud = new Task[listSize];
-	for (int i = 0; listSize > i; i++)
+	for (size_t i = 0; listSize > i; i++)
 		stud[i] = newstud[i];
 	delete[] newstud;
 }
+
 void List::createList()
 {
 	stud = new Task[listSize];
-	for (int i = 0; listSize > i; i++)
+	for (size_t i = 0; listSize > i; i++)
 	{
 		stud[i] = CreateStudent();
-		stud[i].setStudentIndex(getListSize());
-		stud[i].setRgz(getListSize()+5);
+		stud[i].setStudentIndex(stud->generateID());
+		stud[i].setRgz(stud->generateRGZ());
 	}
 }
+
 void List::deleteStudent(int c)
 {
 	setListSize(getListSize() - 1);
 	Task* newstud = new Task[listSize];
-	int i = 0;
+	size_t i = 0;
 	for (; i < getListSize(); i++)
 	{
 		if (stud[i].getStudentIndex() == c)
@@ -55,10 +67,11 @@ void List::deleteStudent(int c)
 		newstud[i] = stud[i + 1];
 	delete[] stud;
 	stud = new Task[listSize];
-	for (int i = 0; i < getListSize(); i++)
+	for (size_t i = 0; i < getListSize(); i++)
 		stud[i] = newstud[i];
 	delete[] newstud;
 }
+
 void List::printOneStudent(stringstream& ss) const
 {
 	int index;
@@ -92,12 +105,14 @@ void List::printOneStudent(stringstream& ss) const
 	cout << setw(10) << rgz;
 	cout << setw(3) << day << setw(3) << month << year;
 }
+
 void List::printAll() const
 {
 	cout << std::left << setw(10) << "Index" << setw(13) << "Name" << setw(8) << "Age" << setw(10) << "Mark" << setw(16) << "Exercises" << setw(13) << "RGZ" << "Date" << endl;
-	for (int i = 0; List::getListSize() > i; i++)
+	for (size_t i = 0; List::getListSize() > i; i++)
 		cout << std::left << setw(6) << stud[i].getStudentIndex() << setw(18) << stud[i].getName() << setw(8) << stud[i].getAge() << setw(13) << stud[i].getMark() << setw(13) << stud[i].getCountOfDoneExercises() << setw(10) << stud[i].getRgz() << setw(3) << stud[i].getDay() << setw(3) << stud[i].getMonth() << stud[i].getYear() << endl;
 }
+
 List::~List()
 {
 	cout << "Destructor List" << endl;
@@ -106,7 +121,7 @@ List::~List()
 
 int List::getStudentID(int id) const
 {
-	for (int i = 0; i < listSize; i++)
+	for (size_t i = 0; i < listSize; i++)
 		if (stud[i].getStudentIndex() == id)
 			return i;
 	cout << "Wrong ID" << endl;
@@ -115,7 +130,7 @@ int List::getStudentID(int id) const
 
 int List::getStudentRGZ(int a) const
 {
-	for (int i = 0; i < listSize; i++)
+	for (size_t i = 0; i < listSize; i++)
 		if (stud[i].getRgz() == a)
 			return i;
 	cout << "Wrong count of RGZ" << endl;
@@ -246,7 +261,7 @@ void List::WriteFile(string filename) const
 		cout << "Error open file";
 		return;
 	}
-	for (int i = 0; i < listSize; i++)
+	for (size_t i = 0; i < listSize; i++)
 	{
 		fout << std::left;
 		fout << setw(6) << stud[i].getStudentIndex();
@@ -280,7 +295,7 @@ stringstream List::DataToString()
 {
 	stringstream ss;
 	int index, mark, rgz, exercises, age;
-	string name, name2;
+	string name, name2, temp;
 	sint day, month, year;
 	cout << "Enter student data (ID, Surname, Name, Age, Mark, Exercises, RGZ, Date(day,month,year)):" << endl;
 	cin >> index >> name >> name2 >> age >> mark >> exercises >> rgz >> day >> month >> year;
@@ -328,7 +343,7 @@ void List::regexTask()
 	regex regular("(^[A-ZР-п]+[\\wР-пр-џ,.;:-]* [\\wР-пр-џ,.;:-]+)");
 	int listSize = getListSize();
 	cout << std::left << setw(10) << "Index" << setw(13) << "Name" << setw(8) << "Age" << setw(10) << "Mark" << setw(16) << "Exercises" << setw(13) << "RGZ" << "Date" << endl;
-	for (int i = 0; i < listSize; i++)
+	for (size_t i = 0; i < listSize; i++)
 		if (regex_match(stud[i].getName(), regular))
 		{
 			ss = getObj(i);
@@ -359,9 +374,9 @@ void List::sort(comp condition)
 	do 
 	{
 		pr = 0;
-		for (int i = 0; i < getListSize()-1; i++)
+		for (size_t i = 0; i < getListSize()-1; i++)
 		{
-			if (condition(stud[i].getAge(), stud[i + 1].getAge()))
+			if (condition(stud[i].getMark(), stud[i + 1].getMark()))
 			{
 				temp = stud[i];
 				stud[i] = stud[i + 1];

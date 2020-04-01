@@ -13,7 +13,7 @@ int* Student::createList(int size)
 {
 	listSize = size;
 	list = new int[size];
-	for (int i = 0; i < size; i++)
+	for (size_t i = 0; i < size; i++)
 		list[i] = students(i);
 	return list;
 }
