@@ -1,0 +1,19 @@
+Base class
+
+Index     Name         Age     Mark      Exercises       RGZ          Date
+9     E G               9       9            9            9         9  9  9999
+10    Ivanov Vasya      10      5            10           4         1  1  1111
+11    Zanochkin Egor    18      4            15           5         2  2  2002
+12    Plohoi Ivan       15      3            20           6         15 12 1995
+5     Ivanov Petya      2       2            2            9         2  2  2222
+6     Ivanov Petya      2       2            2            10        2  2  2222
+
+Inheritor class
+
+Index     Name         Age     Mark      Exercises       RGZ          Date                RGZ for Teacher
+9     E G               9       9            9            9         9  9  9999                20
+10    Ivanov Vasya      10      5            10           4         1  1  1111                1
+11    Zanochkin Egor    18      4            15           5         2  2  2002                2
+12    Plohoi Ivan       15      3            20           6         15 12 1995                3
+5     Ivanov Petya      2       2            2            9         2  2  2222                9
+6     Ivanov Petya      2       2            2            10        2  2  2222                10
