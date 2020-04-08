@@ -255,37 +255,35 @@ stringstream List::getObj(int i) const
 	return ss;
 }
 
-stringstream List::DataToString()
-{
-	stringstream ss;
-	int index, mark, rgz, exercises;
-	string name, name2;
-	cout << "Enter student data (ID, Surname, Name, Mark, Exercises, RGZ):" << endl;
-	cin >> index >> name >> name2 >> mark >> exercises >> rgz;
-	ss << index << " " << name << " " << name2 << " " << mark << " " << exercises << " " << rgz;
-	return ss;
-}
-
-Task List::StringToObject(stringstream ss)
+Task List::enterNewStudent()
 {
 	Task add, error;
-	int index, mark, rgz, exercises;
-	string name, name2;
-	regex regular("(^[A-Z]+[\\w]* [\\w]*)");
-	ss >> index >> name >> name2 >> mark >> exercises >> rgz;
+	int index, mark, rgz, exercises, age, rgz4Teach;
+	string surname, name, data;
+	regex regular("([\\d]* [A-Z]+[\\wA-Za-z,.;:-]* [A-Z]+[\\wA-Za-z,.;:-]* [\\d]* [\\d]* [\\d]*)");
+	cout << "Enter data in line(index, surname, name, mark, exercises, rgz)" << endl;
+	cin.ignore();
+	getline(cin, data);
+	std::istringstream temp(data);
+	temp >> index;
+	temp >> surname;
+	temp >> name;
+	temp >> mark;
+	temp >> exercises;
+	temp >> rgz;
 
-	if (name2 == "")
-		name = name + " ";
-	else (name = name + " " + name2);
+	if (name == "")
+		surname = surname + " ";
+	else (surname = surname + " " + name);
 
-	if (!regex_match(name.c_str(), regular))
+	if (!regex_match(data, regular))
 	{
 		cout << "You enter wrong data";
 		return error;
 	}
 
 	add.setStudentIndex(index);
-	add.setName(name);
+	add.setName(surname);
 	add.setMark(mark);
 	add.setCountOfDoneExercises(exercises);
 	add.setRgz(rgz);

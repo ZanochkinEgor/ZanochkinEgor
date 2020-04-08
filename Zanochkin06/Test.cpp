@@ -4,6 +4,7 @@
 int TestAddStudent(List&, int);
 int TestDeleteStudent(List&, int);
 int TestGetStudentID(List&, int);
+int TestReadFile(List&, int);
 
 int main()
 {
@@ -16,8 +17,9 @@ int main()
 		count = TestAddStudent(test, count);
 		count = TestDeleteStudent(test, count);
 		count = TestGetStudentID(test, count);
+		count = TestReadFile(test, count);
 
-		if (count == 3)
+		if (count == 4)
 			cout << endl << "All tests are successful" << endl;
 		else
 			cout << endl << "Not all tests are successful" << endl;
@@ -66,5 +68,24 @@ int TestGetStudentID(List& test, int count)
 	}
 	else
 		cout << endl << "Test: GetStudentId - unsuccessful" << endl;
+	return count;
+}
+
+int TestReadFile(List& test, int count)
+{
+	string filename = "Text.txt";
+	int a = 3;
+	test.ReadFile(filename, a);
+
+	string expected = "Ivanov Vasya";
+	string real = test.stud[0].getName();
+
+	if (expected == real)
+	{
+		cout << endl << "Test: Readfile - successful" << endl;
+		count++;
+	}
+	else
+		cout << endl << "Test: Readfile - unsuccessful" << endl;
 	return count;
 }

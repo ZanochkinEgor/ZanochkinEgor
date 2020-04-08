@@ -23,6 +23,7 @@ public:
 	stringstream getObj(int i) const;
 	stringstream DataToString();
 	Task StringToObject(stringstream);
+	Task enterNewStudent();
 	void regexTask();
 	static bool sortAsc(const int&, const int&);
 	static bool sortDesc(const int&, const int&);

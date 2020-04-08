@@ -51,10 +51,12 @@ void Menu()
 			list1.addStudent(var1);
 			break;
 		case 2:
-			add = list.StringToObject(list.DataToString());
+			/*add = list.StringToObject(list.DataToString());
 			list.addStudent(add);
 			add1 = list1.StringToObject(list1.DataToString());
-			list1.addStudent(add1);
+			list1.addStudent(add1);*/
+			list.addStudent(list.enterNewStudent());
+			list1.addStudent(list1.enterNewStudent());
 			break;
 		case 3:
 			cout << "Enter a index of student who you want to delete:" << endl;

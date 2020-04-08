@@ -1,1 +1,6 @@
 1     Petrova Katya     5       5            5            5         5  5  5555
+2     Ivanov Petya      2       2            2            6         2  2  2222
+3     Ivanov Petya      2       2            2            7         2  2  2222
+4     Ivanov Petya      2       2            2            8         2  2  2222
+5     Ivanov Petya      2       2            2            9         2  2  2222
+10    Zanochkin Egor    18      5            5            12        2  2  2002

@@ -177,22 +177,20 @@ stringstream List::getObj(int i) const {
 	return ss;
 }
 
-stringstream List::DataToString()
+Task List::enterNewStudent()
 {
-	stringstream ss;
-	int index, mark, rgz, exercises;
-	string name;
-	cout << "Enter student data (ID, Name, Mark, Exercises, RGZ):" << endl;
-	cin >> index >> name >> mark >> exercises >> rgz;
-	ss << index << " " << name << " " << mark << " " << exercises << " " << rgz;
-	return ss;
-}
-
-Task List::StringToObject(stringstream ss) {
 	Task add;
-	int index, mark, rgz, exercises;
-	string name;
-	ss >> index >> name >> mark >> exercises >> rgz;
+	int index, mark, rgz, exercises, age, rgz4Teach;
+	string name, data;
+	cout << "Enter data in line(index, Name, mark, exercises, rgz)" << endl;
+	cin.ignore();
+	getline(cin, data);
+	std::istringstream temp(data);
+	temp >> index;
+	temp >> name;
+	temp >> mark;
+	temp >> exercises;
+	temp >> rgz;
 	add.setStudentIndex(index);
 	add.setName(name);
 	add.setMark(mark);

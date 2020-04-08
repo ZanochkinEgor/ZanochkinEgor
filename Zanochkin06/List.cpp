@@ -323,6 +323,50 @@ Task List::StringToObject(stringstream ss)
 	return add;
 }
 
+Task List::enterNewStudent()
+{
+	Task add, error;
+	int index, mark, rgz, exercises, age;
+	string name, surname, data;
+	sint day, month, year;
+	regex regular("([\\d]* [A-Z]+[\\wA-Za-z,.;:-]* [A-Z]+[\\wA-Za-z,.;:-]* [\\d]* [\\d]* [\\d]* [\\d]* [\\d]* [\\d]* [\\d]*)");
+	cout << "Enter student data (ID, Surname, Name, Age, Mark, Exercises, RGZ, Date(day,month,year)):" << endl;
+	cin.ignore();
+	getline(cin, data);
+	std::istringstream temp(data);
+	temp >> index;
+	temp >> surname;
+	temp >> name;
+	temp >> age;
+	temp >> mark;
+	temp >> exercises;
+	temp >> rgz;
+	temp >> day;
+	temp >> month;
+	temp >> year;
+
+	if (name == "")
+		surname = surname + " ";
+	else (surname = surname + " " + name);
+
+	if (!regex_match(data, regular))
+	{
+		cout << "You enter wrong data";
+		return error;
+	}
+
+	add.setStudentIndex(index);
+	add.setName(surname);
+	add.setAge(age);
+	add.setMark(mark);
+	add.setCountOfDoneExercises(exercises);
+	add.setRgz(rgz);
+	add.setDay(day);
+	add.setMonth(month);
+	add.setYear(year);
+	return add;
+}
+
 void List::regexTask()
 {
 	stringstream ss;

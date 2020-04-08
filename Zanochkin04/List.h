@@ -25,6 +25,7 @@ public:
 	stringstream DataToString();
 	Task StringToObject(stringstream);
 	void regexTask();
+	Task enterNewStudent();
 	~List();
 };
 
