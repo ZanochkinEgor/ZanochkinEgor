@@ -1,4 +1,4 @@
 1  Vasya  5      10    4     
+2  Egor   4      15    5     
 3  Ivan   3      20    6     
 4  Petya  2      2     7     
-5  Petya  2      2     8     

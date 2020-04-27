@@ -35,7 +35,6 @@ void Menu()
 			list.addStudent(var);
 			break;
 		case 2:
-			//list.addStudent(list.StringToObject(list.DataToString()));
 			list.addStudent(list.enterNewStudent());
 			break;
 		case 3:

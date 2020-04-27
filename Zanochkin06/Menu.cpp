@@ -9,10 +9,7 @@ void Menu()
 	InheritorList list1;
 	Student age;
 	int c = 0, a = 0, b = 0, value = 0;
-	////////////////////
 	auto count_of_students = 1;
-	//Плюсы auto: В зависимости от введеных данных переменная может менять свой тип. Например, былa int, а после некоторых изменений стала double.
-	////////////////////
 	int menu_number = 1;
 	int delete_number;
 	string fileName;
@@ -51,10 +48,6 @@ void Menu()
 			list1.addStudent(var1);
 			break;
 		case 2:
-			/*add = list.StringToObject(list.DataToString());
-			list.addStudent(add);
-			add1 = list1.StringToObject(list1.DataToString());
-			list1.addStudent(add1);*/
 			list.addStudent(list.enterNewStudent());
 			list1.addStudent(list1.enterNewStudent());
 			break;

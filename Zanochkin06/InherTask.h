@@ -6,7 +6,7 @@ private:
 	int rgzForTeacher;
 public:
 	int getRgzForTeacher() const;
-	void setRgzForTeacher(int rgz1);
+	void setRgzForTeacher(int);
 
 	int InherGenerateID();
 	int InherGenerateRGZ();
@@ -14,7 +14,7 @@ public:
 
 	Inheritor();
 	Inheritor(int, string, int, int, int, int, sint, sint, sint, int);
-	Inheritor(const Inheritor& object);
+	Inheritor(const Inheritor&);
 	~Inheritor();
 };
 

@@ -287,50 +287,6 @@ stringstream InheritorList::getObj(int i) const
 	return ss;
 }
 
-stringstream InheritorList::DataToString()
-{
-	stringstream ss;
-	int index, mark, rgz, exercises, age, rgzForTeacher;
-	string name, name2, temp;
-	sint day, month, year;
-	cout << "Enter student data (ID, Surname, Name, Age, Mark, Exercises, RGZ, Date(day,month,year), RGZ for Teacher):" << endl;
-	cin >> index >> name >> name2 >> age >> mark >> exercises >> rgz >> day >> month >> year >> rgzForTeacher;
-	ss << index << " " << name << " " << name2 << " " << age << " " << mark << " " << exercises << " " << rgz << " " << day << " " << month << " " << year << " " << rgzForTeacher;
-	return ss;
-}
-
-Inheritor InheritorList::StringToObject(stringstream ss)
-{
-	Inheritor add, error;
-	int index, mark, rgz, exercises, age, rgzForTeacher;
-	string name, name2;
-	sint day, month, year;
-	regex regular("(^[A-Z]+[\\w]* [\\w]*)");
-	ss >> index >> name >> name2 >> age >> mark >> exercises >> rgz >> day >> month >> year >> rgzForTeacher;
-
-	if (name2 == "")
-		name = name + " ";
-	else (name = name + " " + name2);
-
-	if (!regex_match(name.c_str(), regular))
-	{
-		cout << "You enter wrong data";
-		return error;
-	}
-
-	add.setStudentIndex(index);
-	add.setName(name);
-	add.setAge(age);
-	add.setMark(mark);
-	add.setCountOfDoneExercises(exercises);
-	add.setRgz(rgz);
-	add.setDay(day);
-	add.setMonth(month);
-	add.setYear(year);
-	add.setRgzForTeacher(rgzForTeacher);
-	return add;
-}
-
 Inheritor InheritorList::enterNewStudent()
 {
 	Inheritor add, error;
@@ -339,7 +295,6 @@ Inheritor InheritorList::enterNewStudent()
 	sint day, month, year;
 	regex regular("([\\d]* [A-Z]+[\\wA-Za-z,.;:-]* [A-Z]+[\\wA-Za-z,.;:-]* [\\d]* [\\d]* [\\d]* [\\d]* [\\d]* [\\d]* [\\d]* [\\d]*)");
 	cout << "Enter student data (ID, Surname, Name, Age, Mark, Exercises, RGZ, Date(day,month,year), RGZ for Teacher):" << endl;
-	//cin.ignore();
 	getline(cin, data);
 	std::istringstream temp(data);
 	temp >> index;

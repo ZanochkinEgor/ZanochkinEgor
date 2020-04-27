@@ -280,49 +280,6 @@ stringstream List::getObj(int i) const
 	return ss;
 }
 
-stringstream List::DataToString()
-{
-	stringstream ss;
-	int index, mark, rgz, exercises, age;
-	string name, name2, temp;
-	sint day, month, year;
-	cout << "Enter student data (ID, Surname, Name, Age, Mark, Exercises, RGZ, Date(day,month,year)):" << endl;
-	cin >> index >> name >> name2 >> age >> mark >> exercises >> rgz >> day >> month >> year;
-	ss << index << " " << name << " " << name2 << " " << age << " " << mark << " " << exercises << " " << rgz << " " << day << " " << month << " " << year;
-	return ss;
-}
-
-Task List::StringToObject(stringstream ss)
-{
-	Task add, error;
-	int index, mark, rgz, exercises, age;
-	string name, name2;
-	sint day, month, year;
-	regex regular("(^[A-Z]+[\\w]* [\\w]*)");
-	ss >> index >> name >> name2 >> age >> mark >> exercises >> rgz >> day >> month >> year;
-
-	if (name2 == "")
-		name = name + " ";
-	else (name = name + " " + name2);
-
-	if (!regex_match(name.c_str(), regular))
-	{
-		cout << "You enter wrong data";
-		return error;
-	}
-
-	add.setStudentIndex(index);
-	add.setName(name);
-	add.setAge(age);
-	add.setMark(mark);
-	add.setCountOfDoneExercises(exercises);
-	add.setRgz(rgz);
-	add.setDay(day);
-	add.setMonth(month);
-	add.setYear(year);
-	return add;
-}
-
 Task List::enterNewStudent()
 {
 	Task add, error;

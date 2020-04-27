@@ -1,13 +1,7 @@
 #include "Student.h"
 
-int Student::getAge() const
-{
-	return age;
-}
-void Student::setAge(const int age1)
-{
-	age = age1;
-}
+int Student::getAge() const { return age; }
+void Student::setAge(const int age1){ age = age1; } 
 
 int* Student::createList(int size)
 {

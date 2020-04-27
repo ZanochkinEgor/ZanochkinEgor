@@ -22,8 +22,6 @@ public:
 	int FileString(string);
 	void WriteFile(string) const;
 	stringstream getObj(int i) const;
-	stringstream DataToString();
-	Task StringToObject(stringstream);
 	void regexTask();
 	Task enterNewStudent();
 	~List();

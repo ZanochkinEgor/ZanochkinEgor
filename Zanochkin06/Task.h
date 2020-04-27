@@ -68,7 +68,7 @@ public:
 
 	Task();
 	Task(int, string, int, int, int, int, sint, sint, sint);
-	Task(const Task& stud);
+	Task(const Task&);
 	~Task();
 };
 

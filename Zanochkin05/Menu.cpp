@@ -6,10 +6,7 @@ void Menu()
 	List list;
 	Student age;
 	int c = 0, a = 0, b = 0, value = 0;
-	////////////////////
 	auto count_of_students = 1;
-	//Плюсы auto: В зависимости от введеных данных переменная может менять свой тип. Например, былa int, а после некоторых изменений стала double.
-	////////////////////
 	int menu_number = 1;
 	int delete_number;
 	string fileName;
@@ -43,7 +40,6 @@ void Menu()
 			list.addStudent(var);
 			break;
 		case 2:
-			//list.addStudent(list.StringToObject(list.DataToString()));
 			list.addStudent(list.enterNewStudent());
 			break;
 		case 3:
@@ -96,8 +92,8 @@ void Menu()
 			list.regexTask();
 			break;
 		case 10:
-			cout << "1) Incrising" << endl;
-			cout << "2) Decrising" << endl;
+			cout << "1) Increasing" << endl;
+			cout << "2) Decreasing" << endl;
 			cin >> value;
 			cout << endl;
 			if (value == 1) list.sort(list.sortAsc);

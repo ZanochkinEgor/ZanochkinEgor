@@ -1,0 +1,4 @@
+10 Ivanov 10 5 10 4 1 1 1111 Male
+12 Plohoi Ivan 15 3 7 6 5 10 2005 5
+13 Abdulin 10 5 10 7 20 8 2009 4
+11 Zanochkin Egor 18 4 15 5 2 2 2002 Male

@@ -21,8 +21,6 @@ public:
 	int FileString(string);
 	void WriteFile(string) const;
 	stringstream getObj(int i) const;
-	stringstream DataToString();
-	Task StringToObject(stringstream);
 	Task enterNewStudent();
 	void regexTask();
 	static bool sortAsc(const int&, const int&);
