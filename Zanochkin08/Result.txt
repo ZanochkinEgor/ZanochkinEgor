@@ -1,0 +1,6 @@
+10    Ivanov-           10      5         10           4         1  1  1111         Male
+13    Abdulin           10      5         10           7         20 8  2009         4
+6     Ivanova Katya     15      5         10           10        1  1  2000         Female
+11    Zanochkin         18      4         15           5         2  2  2002         Male
+12    Plohoi            15      3         7            6         5  10 2005         5
+5     Vasya             10      2         5            9         2  2  2002         5
