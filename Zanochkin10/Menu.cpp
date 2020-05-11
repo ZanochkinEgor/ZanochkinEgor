@@ -9,6 +9,8 @@ void Menu() noexcept
 	}
 	catch (const std::exception& ex)
 	{
+		cin.clear();
+		cin.ignore(10000, '\n');
 		cout << ex.what() << endl << endl;
 	}
 	try
@@ -17,6 +19,8 @@ void Menu() noexcept
 	}
 	catch (const std::exception& ex)
 	{
+		cin.clear();
+		cin.ignore(10000, '\n');
 		cout << ex.what() << endl << endl;
 	}
 	try
@@ -25,6 +29,8 @@ void Menu() noexcept
 	}
 	catch (const std::exception& ex)
 	{
+		cin.clear();
+		cin.ignore(10000, '\n');
 		cout << ex.what() << endl << endl;
 	}
 }
