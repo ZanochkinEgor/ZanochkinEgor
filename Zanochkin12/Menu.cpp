@@ -78,6 +78,7 @@ void vectorMenu()
 	while (menuNum)
 	{
 		menuNum = 0;
+		cout << "VECTOR" << endl;
 		cout << "1. Print all students" << endl;
 		cout << "2. Add one student" << endl;
 		cout << "3. Get one student" << endl;
@@ -193,6 +194,7 @@ void setMenu()
 	while (menuNum)
 	{
 		menuNum = 0;
+		cout << "SET" << endl;
 		cout << "1. Print all students" << endl;
 		cout << "2. Add one student" << endl;
 		cout << "3. Get one student" << endl;
@@ -304,6 +306,7 @@ void listMenu()
 	while (menuNum)
 	{
 		menuNum = 0;
+		cout << "LIST" << endl;
 		cout << "1. Print all students" << endl;
 		cout << "2. Add one student" << endl;
 		cout << "3. Get one student" << endl;
@@ -416,6 +419,7 @@ void mapMenu()
 	while (menuNum)
 	{
 		menuNum = 0;
+		cout << "MAP" << endl;
 		cout << "1. Print all students" << endl;
 		cout << "2. Add one student" << endl;
 		cout << "3. Get one student" << endl;
